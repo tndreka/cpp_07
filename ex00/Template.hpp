@@ -6,7 +6,7 @@
 /*   By: tndreka < tndreka@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 17:10:36 by tndreka           #+#    #+#             */
-/*   Updated: 2025/09/05 17:38:36 by tndreka          ###   ########.fr       */
+/*   Updated: 2025/09/08 17:36:12 by tndreka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 #include <iostream>
 
+
+/*
+	=========== TEMPLATES =============
+
+*/
+
+//Swap template
 template<typename T>
 void swap(T &a, T &b)
 {
@@ -23,6 +30,27 @@ void swap(T &a, T &b)
 	a = b;
 	b = tmp;
 }
-
+//min template
+template<typename T>
+T min(T &a, T &b)
+{
+	T res;
+	if (a < b)
+		res = a;
+	else
+		res = b;
+	return res;
+}
+//Max
+template<typename T>
+T max(T &a, T &b)
+{
+	T res;
+	if (a > b)
+		res = a;
+	else
+		res = b;
+	return res;
+}
 
 #endif
